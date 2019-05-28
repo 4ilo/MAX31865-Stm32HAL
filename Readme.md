@@ -12,7 +12,7 @@ Features:
 
 ## Example
 
-```
+```c
 // Define SPI pinout
 MAX31865_GPIO max_gpio;
 max_gpio.MISO_PIN = MAX_MISO_Pin;
