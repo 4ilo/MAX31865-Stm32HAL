@@ -29,5 +29,5 @@ max_gpio.CE_PORT = MAX_CE_GPIO_Port;
 MAX31865_init(&max_gpio, 3);
 
 // Perform a single shot conversion, and calculate the temperature
-foat temp = MAX31865_readTemp();
+float temp = MAX31865_readTemp();
 ```
