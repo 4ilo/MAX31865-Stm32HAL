@@ -21,9 +21,9 @@ void spi_write(uint8_t *data, uint8_t len)
     {
         for (int8_t i = 7; i >= 0; i--)
         {
-            HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 1);
-            DELAY(1);
             HAL_GPIO_WritePin(gpio->MOSI_PORT, gpio->MOSI_PIN, (data[x] & (1 << i)));
+            DELAY(1);
+            HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 1);
             DELAY(1);
             HAL_GPIO_WritePin(gpio->CLK_PORT, gpio->CLK_PIN, 0);
         }
